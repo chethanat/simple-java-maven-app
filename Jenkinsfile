@@ -11,7 +11,7 @@ pipeline{
     stage('Package') {
       when {
         allOf{
-        branch 'dev'
+        branch 'master'
         changeset '**'
         }
       }
