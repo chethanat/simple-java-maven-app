@@ -9,6 +9,12 @@ pipeline{
       }
     }
     stage('Package') {
+      when {
+        allOf{
+        branch 'dev'
+        changeset '**'
+        }
+      }
       steps{
         script{
           bat "mvn package"
