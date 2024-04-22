@@ -13,10 +13,7 @@ pipeline{
     }
     stage('Package') {
       when {
-        allOf{
-        branch 'master'
         changeset '**'
-        }
       }
       steps{
         script{
